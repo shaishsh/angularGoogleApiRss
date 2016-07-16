@@ -7,13 +7,13 @@
         		</div>
     	</div>
     	<br/>
-    	<div class="input-group">
-    		<input type="text" class="form-control" ng-model="rssUrl" placeholder="Add RSS" name="rssUrl" id="rssUrl">
-        		<div class="input-group-btn">
-       				<button class="btn btn-default" ng-click="pushUrlToRssList(rssUrl)" type="submit"><i class="glyphicon glyphicon-plus"></i>
-            		</button>
-        		</div>
-    	</div>
+	<form name="urlForm" class="form-inline" ng-submit="pushUrlToRssList(rssUrl)">
+    		<div class="form-group">	
+    		<input type="url" class="form-control" ng-model="rssUrl" placeholder="Add RSS" name="rssUrl" id="rssUrl" required>
+			<button class="btn btn-default" ng-disabled="!urlForm.$valid" type="submit"><i class="glyphicon glyphicon-plus"></i>
+    			</button>
+    		</div>
+	</form>
     	<hr/>
     	<div class="input-group" style="margin-top:10px;" ng-repeat="rss in rssList | filter: searchRss track by $index">
     		<a ng-href="#{{$index}}" class="form-control btn btn-primary" ng-class="{'active': getActiveButton($index)}" title="{{ rss }}">{{ rss | limitTo : 32 }}</a>

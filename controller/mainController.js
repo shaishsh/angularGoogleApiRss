@@ -14,7 +14,7 @@ angularRSSTest
 		return $scope.activeButton == index;
 	};	
 
-    	if($routeParams.rssIndex){
+    	if($routeParams.rssIndex && $scope.rssList[$routeParams.rssIndex] != null){
 		var index = $routeParams.rssIndex;
 		$scope.setActiveButton(index);	
     		getFeedData(index);	
