@@ -1,0 +1,26 @@
+{
+  "name": "angularRSSTest",
+  "authors": [
+    "shai <shai.shsh@gmail.com>"
+  ],
+  "description": "Using google API on server side to get RSS",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-mocks": "*",
+    "angular-resource": "^1.5.7",
+    "angular-sanitize": "^1.5.7",
+    "angular": "^1.5.7",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.7"
+  }
+}
